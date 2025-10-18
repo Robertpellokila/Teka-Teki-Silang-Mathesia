@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teka-Teki Silang Matematika</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Teka-Teki Silang Matematika</h1>
+            
+            <div class="instructions">
+                <h3>Cara Bermain:</h3>
+                    <ul>
+                    <li>Baca petunjuk mendatar dan menurun</li>
+                    <li>Jawab dengan <b>TANPA SPASI</b></li>
+                    <li>Petunjuk berisi soal rumus bangun datar atau operasi matematika.</li>
+                </ul>
+            </div>
+
+            <div class="game-info">
+                <div class="info-item">Skor: <span id="score">0</span>/6</div>
+                <div class="info-item">Waktu: <span id="timer">4:00</span></div>
+            </div>
+        </div>
+
+        <div class="game-container">
+            <div class="crossword-section">
+                <div class="crossword-wrapper">
+                    <div id="crossword" class="crossword-grid"></div>
+                </div>
+            </div>
+
+            <div class="clues-section">
+                <div class="clues-group">
+                    <h3>➡️ Mendatar</h3>
+                    <div id="clues-across"></div>
+                </div>
+                <div class="clues-group">
+                    <h3>⬇️ Menurun</h3>
+                    <div id="clues-down"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="result-modal" class="modal">
+        <div class="modal-content">
+            <h2 id="modal-title">Permainan Selesai!</h2>
+            <p id="modal-message"></p>
+            <div class="access-code" id="access-code"></div>
+            <p style="font-size: 0.9rem; color: #666;">Silakan dihapal atau dicatat agar tidak lupa</p>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
